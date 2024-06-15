@@ -23,7 +23,7 @@ public class HomeController : Controller
             "subaru",
             "fiat"
         };
-        
+
         var frutas = new List<string>
         {
             "naranja",
@@ -31,7 +31,7 @@ public class HomeController : Controller
             "cereza"
         };
 
-           var nombres = new List<string>
+        var nombres = new List<string>
         {
             "jorge",
             "carlos",
@@ -44,13 +44,19 @@ public class HomeController : Controller
 
         return View();
     }
-       
 
     public IActionResult Privacy()
     {
-        List<string> nombres = TempData["Nombres"] as List<string>;
-        if(nombres.Count > 0){
-            ViewData["Nombres"] = nombres;
+        // Obtener los nombres de TempData
+        if (TempData["Nombres"] != null)
+        {
+            List<string> nombres = TempData["Nombres"] as List<string>;
+            if (nombres != null && nombres.Count > 0)
+            {
+                ViewData["Nombres"] = nombres;
+            }
+            // Marcar los datos como leídos pero no eliminados
+            TempData.Keep("Nombres");
         }
         return View();
     }
