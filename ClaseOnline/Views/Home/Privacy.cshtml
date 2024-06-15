@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<ul>
+@foreach(var nombre in ViewData["Nombres"] as List<string> ?? new List<string>())
+    {
+    <li>
+        @nombre
+    </li>
+    }
+</ul>
+
+
+<p>Use this page to detail your site's privacy policy.</p>

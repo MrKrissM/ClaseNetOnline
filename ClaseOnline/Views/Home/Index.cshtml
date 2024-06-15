@@ -1,0 +1,24 @@
+﻿<ul>
+@foreach(var auto in ViewData["Autos"] as List<string> ?? new List<string>())
+    {
+    <li>
+        @auto
+    </li>
+    }
+</ul>
+<ul>
+
+@foreach(var fruta in ViewBag.frutas as List<string> ?? new List<string>())
+    {
+    <li>
+        @fruta
+    </li>
+    }
+</ul>
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
