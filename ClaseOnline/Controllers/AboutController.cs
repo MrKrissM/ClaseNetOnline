@@ -16,9 +16,7 @@ public class AboutController : Controller
 
     public IActionResult About()
     {
-        
-        int suma = 3*4;
-        return View(suma);
+        return View();
     }
 
     public IActionResult Privacy()
