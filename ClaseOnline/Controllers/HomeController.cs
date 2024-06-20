@@ -46,6 +46,7 @@ namespace ClaseOnline.Controllers
                 existingTask.Title = task.Title;
                 existingTask.Description = task.Description;
                 existingTask.DueDate = task.DueDate;
+                existingTask.Priority = task.Priority;
                 existingTask.IsComplete = task.IsComplete;
             }
             return RedirectToAction("Index");
