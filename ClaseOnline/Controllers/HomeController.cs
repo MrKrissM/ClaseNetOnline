@@ -7,7 +7,7 @@ namespace ClaseOnline.Controllers
 {
     public class HomeController : Controller
     {
-        private List<TaskModel> tasks = new List<TaskModel>();
+        private static List<TaskModel> tasks = new List<TaskModel>();
 
         public IActionResult Index()
         {
